@@ -1,0 +1,26 @@
+Kobuz Beispiel zu der deutschen Anleitung fuer RC-Network
+
+Installation: OpenFOAM Foundation 14 in Ubuntu 24.04 unter WSL 2.
+Alle Laengen im OpenFOAM-Fall sind in Metern. Die STL ist bereits bereinigt.
+CAD enthaelt das urspruengliche Modell, ohne spaetere Formenbau-Aenderungen.
+Die FLZ-Datei nennt Stefan als Konstrukteur.
+
+1 Archiv nach C:\CFD entpacken.
+2 In Ubuntu: mkdir -p ~/OpenFOAM
+3 cp -r /mnt/c/CFD/Kobuz ~/OpenFOAM/Kobuz
+4 cd ~/OpenFOAM/Kobuz
+5 bash run.sh
+6 python3 Auswertung.py
+7 paraview --data="$PWD/Kobuz.foam"
+
+Eine weitere Rechnung in einer frischen Kopie durchfuehren.
+Fuer vier MPI-Prozesse sind vier Untergebiete in decomposeParDict eingestellt.
+Waehrend der Rechnung stage.txt und log.foamRun beobachten.
+Optional python3 progress_server.py und Browser http://127.0.0.1:8766.
+Wirbelansicht: QT_QPA_PLATFORM=offscreen pvpython Create_Vortex_View.py
+Danach: paraview --state=Kobuz_Vortices.pvsm
+
+Referenzergebnisse gelten nur fuer den dokumentierten urspruenglichen Fall.
+Das Volumennetz und die Felder werden neu berechnet und sind nicht mitgeliefert.
+Keine abgesicherte Flugleistungsprognose: Rumpf, Trimmung, Netzstudie und
+geeignete Behandlung des Umschlags fehlen. Siehe die vollstaendige Anleitung.

@@ -1,0 +1,8 @@
+FoamFile
+{ format ascii; class volScalarField; object k; }
+dimensions [0 2 -2 0 0 0 0]; internalField uniform 0.009269380690683752; boundaryField {
+inlet {type fixedValue; value uniform 0.009269380690683752;}
+outlet {type inletOutlet; inletValue uniform 0.009269380690683752; value uniform 0.009269380690683752;}
+farfield {type inletOutlet; inletValue uniform 0.009269380690683752; value uniform 0.009269380690683752;}
+aircraft {type kqRWallFunction; value uniform 0.009269380690683752;}
+}

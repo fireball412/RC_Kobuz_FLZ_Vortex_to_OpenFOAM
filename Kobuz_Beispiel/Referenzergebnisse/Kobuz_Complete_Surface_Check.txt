@@ -1,0 +1,87 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  14
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 14-a4867fc914c1
+Exec   : surfaceCheck -checkSelfIntersection complete-repaired.stl
+Date   : Oct 10 2026
+Time   : 08:49:43
+Host   : "DESKTOP-D14IDO6"
+PID    : 7520
+I/O    : uncollated
+Case   : /mnt/c/Users/USER/Documents/Codex/2026-10-10/wie/work/complete-cleanup
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Reading surface from "complete-repaired.stl" ...
+
+Statistics:
+Triangles    : 22668
+Vertices     : 11340
+Bounding Box : (-7.46769e-07 -1.27981 -0.00789585) (0.87 1.27981 0.25)
+
+Region	Size
+------	----
+Kobuz	22668
+
+
+Surface has no illegal triangles.
+
+Triangle quality (equilateral=1, collapsed=0):
+    0 .. 0.05  : 0.227193
+    0.05 .. 0.1  : 0.0916711
+    0.1 .. 0.15  : 0.0296012
+    0.15 .. 0.2  : 0.0292483
+    0.2 .. 0.25  : 0.0255867
+    0.25 .. 0.3  : 0.031807
+    0.3 .. 0.35  : 0.0377184
+    0.35 .. 0.4  : 0.0318511
+    0.4 .. 0.45  : 0.0351156
+    0.45 .. 0.5  : 0.0446444
+    0.5 .. 0.55  : 0.0491883
+    0.55 .. 0.6  : 0.0556732
+    0.6 .. 0.65  : 0.0525851
+    0.65 .. 0.7  : 0.079363
+    0.7 .. 0.75  : 0.0688636
+    0.75 .. 0.8  : 0.068643
+    0.8 .. 0.85  : 0.0319393
+    0.85 .. 0.9  : 0.00273513
+    0.9 .. 0.95  : 0.00308805
+    0.95 .. 1  : 0.00348509
+
+    min 1.14115e-06 for triangle 2941
+    max 0.998413 for triangle 15669
+
+Edges:
+    min 2.07271e-05 for edge 19432 points (0.737997 0.285 0.000314143)(0.737994 0.285 0.000334628)
+    max 0.141964 for edge 32164 points (0.791665 0.00921174 0.02)(0.65 0 0.02)
+
+Checking for points less than 1e-6 of bounding box ((0.870001 2.55963 0.257896) metre) apart.
+Found 0 nearby points.
+
+Surface is closed. All edges connected to two faces.
+
+Number of unconnected parts : 3
+Splitting surface into parts ...
+
+Writing zoning to "zone_complete-repaired.vtk"...
+
+writing part 0 size 12954 to "complete-repaired_0.obj"
+writing part 1 size 8436 to "complete-repaired_1.obj"
+writing part 2 size 1278 to "complete-repaired_2.obj"
+
+Number of zones (connected area with consistent normal) : 3
+More than one normal orientation.
+
+Checking self-intersection.
+Surface is not self-intersecting
+
+
+End
+

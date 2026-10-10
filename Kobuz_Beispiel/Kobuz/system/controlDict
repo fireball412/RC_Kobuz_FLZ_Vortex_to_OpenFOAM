@@ -1,0 +1,12 @@
+FoamFile
+{ format ascii; class dictionary; object controlDict; }
+solver incompressibleFluid;
+startFrom startTime; startTime 0; stopAt endTime; endTime 400; deltaT 1;
+writeControl timeStep; writeInterval 50; purgeWrite 2; writeFormat binary; writePrecision 10;
+writeCompression off; timeFormat general; timePrecision 6; runTimeModifiable true;
+functions {
+ coefficients {type forceCoeffs; libs ("libforces.so"); writeControl timeStep; timeInterval 1; log yes;
+ patches (aircraft); rho rhoInf; rhoInf 1.225; liftDir (-0.0704523655 0 0.9975151448); dragDir (0.9975151448 0 0.0704523655); CofR (0.07636 0 0);
+ pitchAxis (0 1 0); magUInf 15.72207; lRef 0.194623243934; Aref 0.469800000;}
+ yPlus {type yPlus; libs ("libfieldFunctionObjects.so"); writeControl writeTime;}
+}

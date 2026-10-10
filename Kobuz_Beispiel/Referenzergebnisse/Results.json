@@ -1,0 +1,17 @@
+{
+  "iterations": 193,
+  "Cl_wing_reference": 0.53648326969,
+  "Cd_wing_reference": 0.035608632632,
+  "Cm_about_CG": -0.012245785752,
+  "lift_N": 38.15880270945216,
+  "drag_N": 2.5327589211551804,
+  "pitch_moment_Nm": -0.16951960061687038,
+  "lift_drag_ratio": 15.066101392724773,
+  "equivalent_glide_angle_deg": 3.79738993477893,
+  "equivalent_sink_speed_m_s": 1.0412482679632011,
+  "force_range_last_40_percent": {
+    "Cl": 0.004953651213658009,
+    "Cd": 0.012827973618677662,
+    "Cm": 0.18497751356052855
+  }
+}

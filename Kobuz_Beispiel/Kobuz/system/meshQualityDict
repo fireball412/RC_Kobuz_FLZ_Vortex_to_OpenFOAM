@@ -1,0 +1,5 @@
+FoamFile
+{ format ascii; class dictionary; object meshQualityDict; }
+#includeEtc "caseDicts/mesh/generation/meshQualityDict"
+minFaceWeight 0.05;
+maxBoundarySkewness 4;
